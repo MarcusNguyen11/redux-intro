@@ -14,6 +14,7 @@ export const cartSlice = createSlice({
     reducers: {
         addToCart: (state, action) => {
             const newProduct = action.payload;
+            console.log(newProduct)
             state.products.forEach((cartProduct) => {
                 if (cartProduct.id === newProduct.id) {
                     cartProduct.qty += 1;
